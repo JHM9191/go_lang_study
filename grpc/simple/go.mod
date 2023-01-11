@@ -1,4 +1,4 @@
-module go_lang_study/grpc
+module go_lang_study/grpc/simple
 
 go 1.18
 

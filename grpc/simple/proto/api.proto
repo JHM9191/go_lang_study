@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package grpc.proto;
-option go_package = "grpc/proto";
+package grpc.simple.proto;
+option go_package = "grpc/simple/proto";
 
 service Api {
   rpc GetHello(Request) returns (Reply);

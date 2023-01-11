@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	pb "go_lang_study/grpc/proto"
+	pb "go_lang_study/grpc/simple/proto"
 )
 
 type APIServer struct {
