@@ -24,5 +24,5 @@ func main() {
 	go PrintKor()
 	go PrintNumbers()
 
-	//time.Sleep(3 * time.Second)
+	time.Sleep(3 * time.Second)
 }
