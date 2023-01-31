@@ -6,6 +6,9 @@ func main() {
 	var messages chan string = make(chan string, 2)
 	messages <- "A"
 	messages <- "B"
-	//messages <- "C"
+	messages <- "C"
 	fmt.Println("Print me")
+
+	var msg string = <-messages
+	fmt.Println(msg)
 }

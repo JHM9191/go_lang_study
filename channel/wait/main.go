@@ -14,12 +14,21 @@ func square(wg *sync.WaitGroup, ch chan int) {
 	wg.Done()
 }
 
+func circle(wg *sync.WaitGroup, ch chan int) {
+	for n := range ch {
+		fmt.Printf("Circle: %d\n", n+n)
+		time.Sleep(time.Second)
+	}
+	wg.Done()
+}
+
 func main() {
 	var wg sync.WaitGroup
 	ch := make(chan int)
 
 	wg.Add(1)
 	go square(&wg, ch)
+	go circle(&wg, ch)
 
 	for i := 0; i < 10; i++ {
 		ch <- i * 2
